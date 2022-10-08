@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 38c1604715e3242ebb1175eab1f81d2c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - gun: {instanceID: 0}
+  - muzzle: {instanceID: 0}
+  - OrbPrefab: {fileID: 8303151869097121814, guid: 6adac68d632b74d99919727a1d47bc8b, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
