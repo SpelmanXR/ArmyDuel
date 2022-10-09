@@ -16,7 +16,7 @@ public class Wind : MonoBehaviour
         {
             speed = Mathf.Clamp(value, MinSpeed, MaxSpeed);
             DirectionFlag.flipX = speed < 0;
-            TxtMPH.text = speed.ToString();
+            TxtMPH.text = Mathf.Abs(speed).ToString() + " mph";
         }
 
         get
