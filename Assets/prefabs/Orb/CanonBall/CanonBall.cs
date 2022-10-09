@@ -43,6 +43,10 @@ public class CanonBall : MonoBehaviour
     {
         //get a reference to the object we hit
         GameObject otherObject = collision.gameObject;
+
+        //destrop the canon ball 10 seconds after any collision
+        Destroy(gameObject, 10f);
+
         /*
         if (firstCollision)
         {

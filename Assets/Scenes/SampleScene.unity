@@ -315,7 +315,7 @@ GameObject:
   - component: {fileID: 520459207}
   m_Layer: 0
   m_Name: collider1
-  m_TagString: Untagged
+  m_TagString: Hill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 547642969}
   m_Layer: 0
   m_Name: hill_center
-  m_TagString: Untagged
+  m_TagString: Hill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1122,6 +1122,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1624057141}
     m_Modifications:
     - target: {fileID: 4576790021901358038, guid: c74914aa2124e4d64a2bd8e4ee58a3f9, type: 3}
+      propertyPath: TNT
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576790021901358038, guid: c74914aa2124e4d64a2bd8e4ee58a3f9, type: 3}
       propertyPath: FlipHorizontal
       value: 1
       objectReference: {fileID: 0}
@@ -1195,6 +1199,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1228161584}
     m_Modifications:
+    - target: {fileID: 4576790021901358038, guid: c74914aa2124e4d64a2bd8e4ee58a3f9, type: 3}
+      propertyPath: TNT
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 4576790021901358038, guid: c74914aa2124e4d64a2bd8e4ee58a3f9, type: 3}
       propertyPath: OrbSprites.Array.size
       value: 1
@@ -1272,7 +1280,7 @@ GameObject:
   - component: {fileID: 1228161587}
   m_Layer: 0
   m_Name: hill_left
-  m_TagString: Untagged
+  m_TagString: Hill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1422,6 +1430,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7137091645091895507, guid: dbb861847fd964b90a15b00df8b1317a, type: 3}
+      propertyPath: MinCanonBallSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8603421820127211173, guid: dbb861847fd964b90a15b00df8b1317a, type: 3}
       propertyPath: m_Name
       value: pine_tree 1
@@ -1488,7 +1500,7 @@ GameObject:
   - component: {fileID: 1428736903}
   m_Layer: 0
   m_Name: collier2
-  m_TagString: Untagged
+  m_TagString: Hill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1546,7 +1558,7 @@ GameObject:
   - component: {fileID: 1476348066}
   m_Layer: 0
   m_Name: collider1
-  m_TagString: Untagged
+  m_TagString: Hill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1604,7 +1616,7 @@ GameObject:
   - component: {fileID: 1509214518}
   m_Layer: 0
   m_Name: collider2
-  m_TagString: Untagged
+  m_TagString: Hill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1666,7 +1678,7 @@ GameObject:
   - component: {fileID: 1624057145}
   m_Layer: 0
   m_Name: hill_right
-  m_TagString: Untagged
+  m_TagString: Hill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1896,6 +1908,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 574764628261142228, guid: e9eb989d3d53a40cbac378bc9e17a8a2, type: 3}
+      propertyPath: MinCanonBallSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375348481273482579, guid: e9eb989d3d53a40cbac378bc9e17a8a2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8603421820127211172, guid: e9eb989d3d53a40cbac378bc9e17a8a2, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -1908,17 +1928,29 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603421820127211178, guid: e9eb989d3d53a40cbac378bc9e17a8a2, type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603421820127211178, guid: e9eb989d3d53a40cbac378bc9e17a8a2, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603421820127211178, guid: e9eb989d3d53a40cbac378bc9e17a8a2, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8603421820127211179, guid: e9eb989d3d53a40cbac378bc9e17a8a2, type: 3}
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8603421820127211179, guid: e9eb989d3d53a40cbac378bc9e17a8a2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.35
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 8603421820127211179, guid: e9eb989d3d53a40cbac378bc9e17a8a2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.92
+      value: 4.53
       objectReference: {fileID: 0}
     - target: {fileID: 8603421820127211179, guid: e9eb989d3d53a40cbac378bc9e17a8a2, type: 3}
       propertyPath: m_LocalPosition.z
