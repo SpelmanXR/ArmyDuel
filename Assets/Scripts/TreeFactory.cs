@@ -8,6 +8,7 @@ public class TreeFactory : MonoBehaviour
     public float MaxX = 4f;
     public int NumTrees = 4;
     public GameObject TreePrefab;
+    public float TreeCatchPoint = -1.2f;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,7 @@ public class TreeFactory : MonoBehaviour
         {
             GameObject tree = Instantiate(TreePrefab);
             tree.transform.position = new Vector2(Random.Range(MinX, MaxX), 5f);
+            tree.GetComponent<Tree>().CatchPoint = TreeCatchPoint;
         }
     }
 

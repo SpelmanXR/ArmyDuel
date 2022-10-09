@@ -12,6 +12,8 @@ public class Tree : MonoBehaviour
 
     public GameObject SwayTrigger;
     public GameObject CatchCollider;
+    //set the collider catch point.  0=middle of tree;-1.2 = foot of tree; +1.2 = top of tree
+    public float CatchPoint = -1.2f;
 
     const float LOCKOUT_TIME_SEC = 0.5f;
     float lockoutPeriod;
@@ -21,6 +23,8 @@ public class Tree : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        BoxCollider2D bc = CatchCollider.GetComponent<BoxCollider2D>();
+        bc.offset = new Vector2(0, CatchPoint);
     }
 
     // Update is called once per frame
