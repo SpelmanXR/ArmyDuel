@@ -13,7 +13,8 @@ public class CanonCtrl : MonoBehaviour
     public Transform muzzle;    //transform of the canon's muzzle
 
     public CanonBall CanonBallPrefab;
-    public Sprite[] OrbSprites;
+    public Transform CannonGun;
+    public bool FlipHorizontal = false;
     Animator animator;
 
     // Start is called before the first frame update
@@ -21,6 +22,13 @@ public class CanonCtrl : MonoBehaviour
     {
         animator = GetComponentInChildren<Animator>();
         UpdateCanonOnScreen();
+
+        if (FlipHorizontal)
+        {
+            //transform.Rotate(0f, 180f, 0f, Space.World);
+            CannonGun.localScale = new Vector3(-CannonGun.localScale.x, CannonGun.localScale.y, CannonGun.localScale.z);
+            //transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        }
     }
 
     // Update is called once per frame
@@ -43,8 +51,7 @@ public class CanonCtrl : MonoBehaviour
     {
         if (Angle != prevAngle)
         {
-            
-            gun.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, (RestAngle - Angle) * Mathf.Sign(transform.localScale.x)));
+            gun.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, (FlipHorizontal ? -1 : 1) * (Angle - RestAngle) * Mathf.Sign(transform.localScale.x)));
             prevAngle = Angle;
         }
     }
@@ -61,7 +68,7 @@ public class CanonCtrl : MonoBehaviour
         canonBall = Instantiate(CanonBallPrefab, null);
         canonBall.StartX = muzzle.position.x;
         canonBall.StartY = muzzle.position.y;
-        canonBall.Angle = Angle;
+        canonBall.Angle = FlipHorizontal ? 180 - Angle : Angle;
         canonBall.Force = TNT;
 
         //canonBall.CanonBallSprite = OrbSprites[Random.Range(0, OrbSprites.Length)];
