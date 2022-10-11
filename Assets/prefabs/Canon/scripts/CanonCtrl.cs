@@ -40,7 +40,6 @@ public class CanonCtrl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            animator.SetTrigger("Fire");
             Fire();
         }
     }
@@ -59,6 +58,7 @@ public class CanonCtrl : MonoBehaviour
 
     public void Fire()
     {
+        animator.SetTrigger("Fire");
 
         CanonBall canonBall;
         //Transform orbTransform = new Transform();
