@@ -1919,7 +1919,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MinSpeed: -30
   MaxSpeed: 30
-  DirectionFlag: {fileID: 916899785}
+  Flag: {fileID: 916899783}
   TxtMPH: {fileID: 548245394}
 --- !u!1001 &5213237750259617183
 PrefabInstance:

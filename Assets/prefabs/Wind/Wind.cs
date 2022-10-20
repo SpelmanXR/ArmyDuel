@@ -6,7 +6,7 @@ public class Wind : MonoBehaviour
 {
     public int MinSpeed = -30;
     public int MaxSpeed = +30;
-    public SpriteRenderer DirectionFlag;
+    public GameObject Flag;
     public TMPro.TMP_Text TxtMPH;
 
     int speed = 0;
@@ -15,8 +15,13 @@ public class Wind : MonoBehaviour
         set
         {
             speed = Mathf.Clamp(value, MinSpeed, MaxSpeed);
-            DirectionFlag.flipX = speed < 0;
             TxtMPH.text = Mathf.Abs(speed).ToString() + " mph";
+
+            SpriteRenderer DirectionFlag = Flag.GetComponent<SpriteRenderer>();
+            DirectionFlag.flipX = speed < 0;
+
+            Animator animator = Flag.GetComponent<Animator>();
+            animator.speed = 0.25f + Mathf.Abs((float)speed / MaxSpeed);
         }
 
         get
